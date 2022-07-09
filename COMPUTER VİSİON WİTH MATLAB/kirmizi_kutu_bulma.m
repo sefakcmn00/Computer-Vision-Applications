@@ -1,0 +1,11 @@
+m1=imread('http://blog.aku.edu.tr/ismailkoyuncu/files/2022/04/kutular2-300x150.jpg');
+subplot(321),imshow(m1);
+k=m1(:,:,1);
+m2=rgb2gray(m1);
+subplot(322),imshow(m3);
+m3=imsubtract(k,m2);
+subplot(323),imshow(m3);
+m4=(m3>=70);
+subplot(324),imshow(m4);
+m5=bwareaopen(m4,1000);
+subplot(325),imshow(m5); 
